@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student marks</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Student results</h1>
+
+    <ul>
+    <% for (let student of students) { %>
+      <li>
+        <strong><%= student.names %></strong> – 
+        <%= student.marks %> – 
+        <% if (student.marks >= 40) { %>
+          <span class="pass">PASS</span>
+        <% } else { %>
+          <span class="fail">FAIL</span>
+        <% } %>
+      </li>
+    <% } %>
+  </ul>
+
+</body>
+</html>
